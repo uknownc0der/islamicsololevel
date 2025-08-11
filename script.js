@@ -81,14 +81,12 @@ renderWaqiah();
 // PWA install prompt hint (optional)
 let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e)=>{
-  // save the event for later if needed
   deferredPrompt = e;
 });
 
 // register service worker
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js').catch(()=>{
-    // swallow - registration might fail on file:// or unsupported environments
+  navigator.serviceWorker.register('sw.js').catch(()=>{
     console.log('sw registration failed');
   });
 }
