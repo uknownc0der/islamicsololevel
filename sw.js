@@ -1,12 +1,12 @@
 const CACHE_NAME = 'islamic-solo-v1';
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/script.js',
-  '/manifest.json',
-  '/icon-192.png',
-  '/icon-512.png'
+  './',
+  './index.html',
+  './style.css',
+  './script.js',
+  './manifest.json',
+  './icon-192.png',
+  './icon-512.png'
 ];
 
 self.addEventListener('install', (ev)=>{
@@ -26,8 +26,7 @@ self.addEventListener('activate', (ev)=>{
 self.addEventListener('fetch', (ev)=>{
   ev.respondWith(
     caches.match(ev.request).then(cached => cached || fetch(ev.request).catch(()=>{
-      // If request fails (offline), try to return cached index.html for navigation
-      if(ev.request.mode === 'navigate') return caches.match('/index.html');
+      if(ev.request.mode === 'navigate') return caches.match('./index.html');
     }))
   );
 });
