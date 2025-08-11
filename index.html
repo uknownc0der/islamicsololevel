@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Islamic Solo Leveling</title>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/icon-192.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <h1>Islamic Solo Leveling</h1>
+
+    <section class="card" id="salawat-card">
+      <div class="card-header">
+        <h2>1k Salawat</h2>
+        <div class="meta" id="salawat-count">0 / 1000</div>
+      </div>
+
+      <div class="progress" aria-hidden="true">
+        <div class="progress-bar" id="salawat-bar" style="width:0%"></div>
+      </div>
+
+      <div class="controls">
+        <button id="salawat-inc">+1</button>
+        <button id="salawat-inc-10">+10</button>
+        <button id="salawat-reset" class="muted">Reset</button>
+      </div>
+    </section>
+
+    <section class="card" id="waqiah-card">
+      <div class="card-header">
+        <h2>Surah Waqiah</h2>
+        <div class="meta" id="waqiah-count">Not completed</div>
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar" id="waqiah-bar" style="width:0%"></div>
+      </div>
+
+      <div class="controls">
+        <button id="waqiah-done">Mark Completed</button>
+        <button id="waqiah-reset" class="muted">Reset</button>
+      </div>
+    </section>
+
+    <footer>
+      <small>Minimal · Offline · Local only</small>
+    </footer>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
